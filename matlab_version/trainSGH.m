@@ -10,12 +10,11 @@
 %   KXTrain: Kernel contruction from training data.
 %   para: parameter about kernel construction. Please utilize this para to construct
 %       kernel for testing data. Including delta and bias.
-function [Wx,KXTrain,para] = trainSGH(XTrain,bases,bit)
+function [Wx,KXTrain,para] = trainSGH(XTrain,bases,bit, rho)
 num_training = size(XTrain,1);
 
 %% Construct PX and QX
 FnormX = sum(XTrain.*XTrain,2);
-rho = 2;
 FnormX = exp(-FnormX/rho);
 alpha = sqrt(2*(exp(1)-exp(-1))/rho);
 part = bsxfun(@times,alpha*XTrain,FnormX);
