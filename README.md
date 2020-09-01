@@ -1,5 +1,5 @@
 ***
-# Matlab Code for Scalable Graph Hashing with Feature Transformation
+# Released Code for Scalable Graph Hashing with Feature Transformation
 ***
 ## introduction
 * This package contains the source code for the following paper:
